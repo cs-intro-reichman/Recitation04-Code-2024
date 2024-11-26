@@ -8,18 +8,7 @@ public class SetOps {
         int [] arr1 = {67, 22, 22};
         System.out.println(countUnique(arr1));
     }
-
-    // Question 5
-    public static boolean contains(int[] arr, int value) {
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == value) {
-                return true;
-            }
-        }
-        return false ;
-    }
-    
-    // Question 5, Expansion 1
+    // Question 5, Step 1
     public static boolean contains(int[] arr, int value, int index) { 
         for (int i = 0; i < index; i++) {
             if (arr[i] == value) {
@@ -29,7 +18,7 @@ public class SetOps {
         return false;
     }
 
-    // Question 5, Expansion 2
+    // Question 5, Step 2
     public static int countUnique(int[] arr) {
         int count = 0;
         for (int i = 0; i < arr.length; i++) {
@@ -39,8 +28,7 @@ public class SetOps {
         }
         return count;
     }
-    
-    // Question 5, Expansion 3
+    // Question 5
     public static int [] set (int[] arr) {
         int [] res = new int [countUnique(arr)]; //{1, 8, 20, -3, 0, 1, 1, 6, 8} -> {1, 8, 20, -3, 0, 6}
         int index = 0; 
@@ -52,9 +40,19 @@ public class SetOps {
         }
         return res;
     }
+
+    // Question 5, Expansion 3
+    public static boolean contains(int[] arr, int value) {
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == value) {
+                return true;
+            }
+        }
+        return false ;
+    }
     
     // Question 5, Expansion 4
-    public static int [] unionSets(int[] set1, int[] set2) { //{1,2,3,4}, {4,6,7} 
+    public static int [] unionSets(int[] set1, int[] set2) { 
         int [] res = new int [set1.length + set2.length]; //{1,2,3,4,4,6,7}
         int index = 0; 
         for (int i = 0; i < set1.length; i++) {
