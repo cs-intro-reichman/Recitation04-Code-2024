@@ -2,10 +2,11 @@ public class Warmup {
 
     public static void main(String[] args) {
         System.out.println(lengthOfLastWord("Hello world"));
-        System.out.println("Intro to computer science");
-        System.out.println(" Strings      are  great   ");
-        System.out.println("   a ");
-        System.out.println(" test ");
+        System.out.println(lengthOfLastWord("Intro to computer science"));
+        System.out.println(lengthOfLastWord(" Strings      are  great   "));
+        System.out.println(lengthOfLastWord("   a "));
+        System.out.println(lengthOfLastWord(" test "));
+        System.out.println(lengthOfLastWord("test"));
     }
 
     // Question 1
